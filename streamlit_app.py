@@ -9,7 +9,7 @@ st.write('This is a simple Iris Classifier app') #menampilkan teks
 # 1. open terminal and run `streamlit run streamlit_app.py`
 
 # == Inference Function
-model = joblib.load(r'D:\DS\python exercises\CS50\model_joblib')
+model = joblib.load('model.joblib')
 def get_prediction(data:pd.DataFrame):
     pred = model.predict(data)
     pred_proba = model.predict_proba(data)
@@ -64,4 +64,5 @@ if button:
 # # Prediction Button
 # button = st.button("Predict", use_container_width=True)
 # if button:
+
 #     st.write("Prediksi Berhasil !")
